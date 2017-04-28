@@ -137,4 +137,5 @@ RUN set -ex && \
   rm -r /usr/src/ruby && \
   rm -r /usr/src/node
 
+ADD nginx.conf /etc/nginx/nginx.conf
 RUN mkdir /srv/www
