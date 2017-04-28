@@ -5,3 +5,18 @@
 [![license](https://img.shields.io/github/license/VerdigrisTech/docker-middleman.svg)](https://github.com/VerdigrisTech/docker-middleman/blob/master/LICENSE)
 
 Docker image for running Middleman static sites behind Nginx.
+
+## Usage
+
+```Dockerfile
+FROM verdigristech/middleman
+
+WORKDIR /srv/www
+
+ADD . /srv/www
+RUN middleman build
+
+EXPOSE 80
+
+CMD nginx
+```
