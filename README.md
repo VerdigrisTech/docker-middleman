@@ -12,12 +12,8 @@ Docker image for running Middleman static sites behind Nginx.
 ```Dockerfile
 FROM verdigristech/middleman
 
-WORKDIR /srv/www
-
 ADD . /srv/www
 RUN middleman build
-
-EXPOSE 80
 
 CMD nginx
 ```
