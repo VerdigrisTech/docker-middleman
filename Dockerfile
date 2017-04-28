@@ -139,5 +139,8 @@ RUN set -ex && \
 
 ADD nginx.conf /etc/nginx/nginx.conf
 RUN mkdir /srv/www
+WORKDIR /srv/www
 
 EXPOSE 80 443
+
+CMD nginx
