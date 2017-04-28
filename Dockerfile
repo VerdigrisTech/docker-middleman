@@ -130,9 +130,11 @@ RUN set -ex && \
   gem install middleman therubyracer --no-rdoc --no-ri && \
   \
 ###############################################################################
-# Clean up
+# Clean up installation files
 ###############################################################################
   apk del .builddeps && \
   cd / && \
   rm -r /usr/src/ruby && \
   rm -r /usr/src/node
+
+RUN mkdir /srv/www
