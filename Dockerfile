@@ -142,5 +142,3 @@ RUN mkdir /srv/www
 WORKDIR /srv/www
 
 EXPOSE 80 443
-
-CMD nginx
