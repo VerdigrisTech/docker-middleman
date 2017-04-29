@@ -137,7 +137,9 @@ RUN set -ex && \
   rm -r /usr/src/ruby && \
   rm -r /usr/src/node
 
+RUN rm /etc/nginx/conf.d/*.conf
 ADD nginx.conf /etc/nginx/nginx.conf
+ADD middleman.conf /etc/nginx/conf.d/middleman.conf
 RUN mkdir /srv/www
 WORKDIR /srv/www
 
